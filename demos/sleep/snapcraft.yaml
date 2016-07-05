@@ -1,0 +1,17 @@
+name: sleep-daemon-swem
+version: 1.0
+summary: Run sleep as a simple daemon, exit after 10 seconds
+description: Run sleep as a simple daemon, exit after 10 seconds
+confinement: strict
+
+apps:
+  sleep: 
+    command: launcher.sh
+    daemon: simple
+
+parts:
+  sleep:
+    plugin: copy
+    files:
+        launcher.sh: launcher.sh
+ 
